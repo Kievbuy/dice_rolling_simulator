@@ -4,11 +4,14 @@ class Die
 		@sides = sides
 	end
 
+	def generate_die_roll
+		rand(@sides) + 1
+	end
+
 	def roll(number=1)
 		roll_array = []
 		number.times do
-			roll_value = rand(@sides) + 1
-			roll_array << roll_value
+			roll_array << generate_die_roll
 		end
 		total = 0
 		roll_array.each do |roll|
