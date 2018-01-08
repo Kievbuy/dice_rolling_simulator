@@ -1,5 +1,5 @@
-def roll
-	rand(6) + 1
+def roll(sides)
+	rand(sides) + 1
 end
 
-puts roll
+puts roll(6)
